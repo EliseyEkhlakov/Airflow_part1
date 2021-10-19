@@ -1,0 +1,25 @@
+[2021-10-17 15:36:55,753] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-10-16T00:00:00+00:00 [queued]>
+[2021-10-17 15:36:55,760] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-10-16T00:00:00+00:00 [queued]>
+[2021-10-17 15:36:55,760] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-17 15:36:55,760] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-10-17 15:36:55,761] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-17 15:36:55,781] {taskinstance.py:1087} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2021-10-16T00:00:00+00:00
+[2021-10-17 15:36:55,782] {standard_task_runner.py:52} INFO - Started process 4338 to run task
+[2021-10-17 15:36:55,788] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'user_processing', 'extracting_user', '2021-10-16T00:00:00+00:00', '--job-id', '15', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmp3crzf3nd', '--error-file', '/tmp/tmpppyuiisb']
+[2021-10-17 15:36:55,789] {standard_task_runner.py:77} INFO - Job 15: Subtask extracting_user
+[2021-10-17 15:36:55,877] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2021-10-16T00:00:00+00:00 [running]> on host airflowvm
+[2021-10-17 15:36:55,988] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2021-10-16T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-10-16T00:00:00+00:00
+[2021-10-17 15:36:55,989] {http.py:111} INFO - Calling HTTP method
+[2021-10-17 15:36:56,004] {base.py:69} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-10-17 15:36:56,005] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-10-17 15:36:56,370] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Kayla","last":"Robinson"},"location":{"street":{"number":1454,"name":"Balmoral Road"},"city":"Blenheim","state":"Canterbury","country":"New Zealand","postcode":52043,"coordinates":{"latitude":"58.4031","longitude":"58.4197"},"timezone":{"offset":"-6:00","description":"Central Time (US & Canada), Mexico City"}},"email":"kayla.robinson@example.com","login":{"uuid":"8a932002-7323-4315-974c-1f5e29e0f7a2","username":"smallbird966","password":"dogg","salt":"oinlevwC","md5":"b14203b226524bcd9a37898487605c13","sha1":"bbf6b5d5e76ba3807d22f325b86f832d63bd93fb","sha256":"3fcc7bcd8bb6ccb6ade845f1773a6f67c5fe3ddcc33f56547e71e5059c1fa8d6"},"dob":{"date":"1962-07-04T04:44:31.432Z","age":59},"registered":{"date":"2018-03-27T16:43:25.687Z","age":3},"phone":"(590)-946-1530","cell":"(187)-473-7457","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/women/16.jpg","medium":"https://randomuser.me/api/portraits/med/women/16.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/16.jpg"},"nat":"NZ"}],"info":{"seed":"c8816390125e04b0","results":1,"page":1,"version":"1.3"}}
+[2021-10-17 15:36:56,397] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20211016T000000, start_date=20211017T153655, end_date=20211017T153656
+[2021-10-17 15:36:56,442] {taskinstance.py:1245} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-10-17 15:36:56,486] {local_task_job.py:151} INFO - Task exited with return code 0

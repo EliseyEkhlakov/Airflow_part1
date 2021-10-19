@@ -1,0 +1,25 @@
+[2021-10-17 15:56:48,094] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-01-02T00:00:00+00:00 [queued]>
+[2021-10-17 15:56:48,100] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-01-02T00:00:00+00:00 [queued]>
+[2021-10-17 15:56:48,101] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-17 15:56:48,101] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-10-17 15:56:48,101] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-17 15:56:48,119] {taskinstance.py:1087} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-01-02T00:00:00+00:00
+[2021-10-17 15:56:48,120] {standard_task_runner.py:52} INFO - Started process 11393 to run task
+[2021-10-17 15:56:48,125] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-01-02T00:00:00+00:00', '--job-id', '26', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpnco_nu4h', '--error-file', '/tmp/tmp_4vxz2ab']
+[2021-10-17 15:56:48,126] {standard_task_runner.py:77} INFO - Job 26: Subtask extracting_user
+[2021-10-17 15:56:48,238] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-01-02T00:00:00+00:00 [running]> on host airflowvm
+[2021-10-17 15:56:48,363] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-01-02T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-01-02T00:00:00+00:00
+[2021-10-17 15:56:48,364] {http.py:111} INFO - Calling HTTP method
+[2021-10-17 15:56:48,368] {base.py:69} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-10-17 15:56:48,369] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-10-17 15:56:48,699] {http.py:115} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Nathan","last":"Bonnet"},"location":{"street":{"number":5247,"name":"Rue des Cuirassiers"},"city":"Vitry-sur-Seine","state":"Hautes-Alpes","country":"France","postcode":57219,"coordinates":{"latitude":"4.7592","longitude":"-114.8344"},"timezone":{"offset":"+4:30","description":"Kabul"}},"email":"nathan.bonnet@example.com","login":{"uuid":"b1a8bf78-9203-4b73-8403-ce37ad7748fd","username":"angrydog808","password":"corn","salt":"LhanRDla","md5":"f41d830aa245276c8aee4d2ab5eb0df6","sha1":"1bec3649037daad9a99ab717eed4de19c5f74dd4","sha256":"cb713a3a7b78732eed4c0b2660a66d4bca568f89e92ad8029dfa83f096bb2ee4"},"dob":{"date":"1994-07-24T07:50:00.315Z","age":27},"registered":{"date":"2006-02-13T18:39:03.471Z","age":15},"phone":"04-84-42-59-86","cell":"06-41-64-48-67","id":{"name":"INSEE","value":"1NNaN95886618 41"},"picture":{"large":"https://randomuser.me/api/portraits/men/45.jpg","medium":"https://randomuser.me/api/portraits/med/men/45.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/45.jpg"},"nat":"FR"}],"info":{"seed":"a429e4d7c35c87af","results":1,"page":1,"version":"1.3"}}
+[2021-10-17 15:56:48,776] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200102T000000, start_date=20211017T155648, end_date=20211017T155648
+[2021-10-17 15:56:48,830] {taskinstance.py:1245} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-10-17 15:56:48,833] {local_task_job.py:151} INFO - Task exited with return code 0
