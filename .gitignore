@@ -1,6 +1,7 @@
 /dags/__pycache__
 /dags/subdags/__pycache__
 /logs
+plugins/elasticsearch_plugin/hooks/__pycache__
 airflow.db
 webserver_config.py
 airflow-webserver.pid
