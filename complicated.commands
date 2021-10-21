@@ -1,0 +1,2 @@
+Start Elasticsearch: sudo systemctl start elasticsearch
+curl -X GET "http://localhost:9200/connections/_search" -H "Content-type: application/json" -d '{"query":{"match_all":{}}}'
